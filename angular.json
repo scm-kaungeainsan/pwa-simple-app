@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "6a3a594b-ba60-4d4c-92b1-8400607fc479"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -101,6 +104,14 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://scm-kaungeainsan.github.io/pwa-simple-app/",
+            "name": "scm-kaungeainsan",
+            "email": "scm.dott.developer5@gmail.com"
           }
         }
       }
