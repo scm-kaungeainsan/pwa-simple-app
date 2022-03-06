@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1646579890454,
+  "timestamp": 1646582690199,
   "index": "https://scm-kaungeainsan.github.io/pwa-simple-app/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://scm-kaungeainsan.github.io/pwa-simple-app/favicon.ico",
         "https://scm-kaungeainsan.github.io/pwa-simple-app/index.html",
-        "https://scm-kaungeainsan.github.io/pwa-simple-app/main.e8ff2e3598d9e7d44051.js",
+        "https://scm-kaungeainsan.github.io/pwa-simple-app/main.d8d46656c81820dfb9ef.js",
         "https://scm-kaungeainsan.github.io/pwa-simple-app/manifest.webmanifest",
         "https://scm-kaungeainsan.github.io/pwa-simple-app/polyfills.f64bd6e47efe563eebec.js",
         "https://scm-kaungeainsan.github.io/pwa-simple-app/runtime.bf3d1bdaf3a7b2b066ad.js",
@@ -86,8 +86,8 @@
     "https://scm-kaungeainsan.github.io/pwa-simple-app/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "https://scm-kaungeainsan.github.io/pwa-simple-app/g.27a72eb75fd6c357ce66.jpg": "e7f0d0f053fb3c59a997fb80d8b633a9081c0d9e",
     "https://scm-kaungeainsan.github.io/pwa-simple-app/h.7ce9adc5463a72f085ed.jpg": "2a977ebca96449f3214e57885bc14fb805eb06b7",
-    "https://scm-kaungeainsan.github.io/pwa-simple-app/index.html": "b4a0a87b52b984261b8d4ad42048504409def5a3",
-    "https://scm-kaungeainsan.github.io/pwa-simple-app/main.e8ff2e3598d9e7d44051.js": "a85d1912ceb48bde0888b11ddeb7ad6227c520d4",
+    "https://scm-kaungeainsan.github.io/pwa-simple-app/index.html": "aafeaaf57c726aca4d29e455f38d938b7e1cc60f",
+    "https://scm-kaungeainsan.github.io/pwa-simple-app/main.d8d46656c81820dfb9ef.js": "ca013babf491cdf8c21171846d88868f2efc6fa4",
     "https://scm-kaungeainsan.github.io/pwa-simple-app/manifest.webmanifest": "e840ba0af6f18948c1c23a827105a129796cb655",
     "https://scm-kaungeainsan.github.io/pwa-simple-app/polyfills.f64bd6e47efe563eebec.js": "34b37fbfdd72df36b7f30ebf4d24279d51157e76",
     "https://scm-kaungeainsan.github.io/pwa-simple-app/runtime.bf3d1bdaf3a7b2b066ad.js": "0f1af544b424944bc9119ace01645458e93f0743",
