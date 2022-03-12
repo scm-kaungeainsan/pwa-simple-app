@@ -1,0 +1,47 @@
+.item-list-container {
+  height: 200px;
+  overflow: auto;
+  background-color: white;
+  color: black;
+  .item-list-table {
+    margin: 5px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      td {
+        vertical-align: baseline;
+        line-height: 1.5;
+        padding: 8px;
+        .extra-price {
+          font-size: 12px;
+        }
+        .hide {
+          visibility: hidden;
+        }
+      }
+      tr:nth-child(even) {background-color: #e9f3ff;}
+      .item-input {
+        background-color: unset;
+        // color: white;
+        border: 0;
+        width: 100%;
+      }
+      .item-number {
+        width: 10%;
+      }
+      .item-name {
+        width: 50%;
+        .extrea-item {
+          font-size: 12px;
+        }
+      }
+      .quatity-number {
+        text-align: end;
+        .extrea-item {
+          font-size: 12px;
+        }
+      }
+
+    }
+   }
+}

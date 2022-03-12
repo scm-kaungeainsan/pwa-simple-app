@@ -1,0 +1,16 @@
+<div class="category-list-container">
+    <div class="category-inner-container">
+      <!-- <img src="../../assets/images/cake.jpg"> -->
+      <div class="category-box-cover"></div>
+      <div (click)="chooseCategory(item.id)" *ngFor="let item of categoryList; let i = index"
+        class="category-box">
+        <div class="item-img-cover">
+          <img class="category-img" [src]="item.img">
+        </div>
+        <span>{{item.name}}</span>
+      </div>
+    </div>
+</div>
+
+<!-- 'background-image' : 'url('+item.img+')' -->
+<!-- [ngStyle]="{'border-bottom-color' : item.color, 'background-color': 'black'}"  -->

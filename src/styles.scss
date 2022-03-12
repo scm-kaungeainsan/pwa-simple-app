@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin-top:0;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.red {
+  color: red;
+}
+.green {
+  color: rgb(2, 245, 2);
+}
+.yellow {
+  color: yellow;
+}
+.tooltip-class {
+  background: rgb(2, 245, 2)!important;
+  color: black!important;
+}

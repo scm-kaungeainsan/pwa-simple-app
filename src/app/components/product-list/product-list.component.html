@@ -1,0 +1,34 @@
+<div class="product-list-container">
+  <div class="casher-waiter-container">
+    <div class="waiter-container">
+      <button class="" mat-button>
+        <span>
+          SERVED BY
+        </span>
+        <span class="yellow">
+          WAITRESS 1
+        </span></button>
+    </div>
+    <div class="casher-container">
+      <div class="date-time">
+        <span> {{myDate | date:'d MMM y'}}</span>
+        <span> {{myDate | date:'h:mm a'}}</span>
+      </div>
+      <div class="casher-name-container">
+        <span>CASHIER1</span>
+        <mat-icon>lock</mat-icon>
+      </div>
+    </div>
+  </div>
+  <span class="heading">PRODUCT</span>
+  <div class="product-inner-container">
+    <div (click)="chooseProduct(item.id)" *ngFor="let item of productList; let i = index" class="product-box">
+      <div class="product-box-inner">
+        <div class="item-img-cover">
+          <img *ngIf="item.img" class="category-img" [src]="item.img">
+        </div>
+        <span>{{item.name}}</span>
+      </div>
+    </div>
+  </div>
+</div>

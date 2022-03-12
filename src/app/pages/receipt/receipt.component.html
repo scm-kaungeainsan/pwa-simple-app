@@ -1,0 +1,126 @@
+<div class="receipt-container">
+  <div class="receipt-body-container">
+    <div class="calculation-container">
+
+      <!-- menu-container -->
+      <div class="menu-container">
+        <div class="menu-inner">
+          <div class="menu-box icon-container">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">menu</mat-icon>
+          </div>
+          <div class="menu-box invoice-number">
+            <div class="invoice-number-inner">
+              <span>INVOICE NUMBER</span>
+              <span class="green">201212020001</span>
+            </div>
+          </div>
+          <div class="menu-box table-menu">
+            <div class="table-inner">
+              <span>TABLE</span>
+              <div class="table-span-cover">
+                <button mat-button matTooltipClass="tooltip-class"
+                  [matTooltip]="customerTable.length > 3? tableToolTip : ''">
+                  <span *ngFor="let table of customerTable; let i=index" class="green">
+                    {{i<3 ? table : '' }}{{i<2 ? ',' : '' }}</span>
+                      <span class="green" *ngIf="customerTable.length > 3">...</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-box pax">
+            <div class="pax-inner">
+              <span>PAX</span>
+              <div class="pax-number">
+                <button mat-button class="green" [disabled]="paxValue==0"  (click)="paxValue = paxValue -1" >-</button>
+                <span>{{paxValue}}</span>
+                <button mat-button class="green" (click)="paxValue = paxValue +1">+</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- item-list-table-container -->
+      <div class="item-list-table-container">
+        <app-item-list [calculateTable]="calculateTable"></app-item-list>
+      </div>
+
+      <!-- middle-part-container -->
+      <div class="middle-part-container">
+        <div class="inner-container">
+          <div class="first-row-container">
+            <div class="discount">
+              <span>DISCOUNT ($)</span>
+              <span class="yellow-color">5.00</span>
+            </div>
+            <div class="service">
+              <span>SERVICE (ADD ON 10%)</span>
+              <span class="yellow-color">2.00</span>
+            </div>
+            <div class="vat">
+              <span>VAT (Add On 7%)</span>
+              <span class="yellow-color">5.00</span>
+            </div>
+          </div>
+          <div class="second-row-container">
+            <div class="user-name">
+              <span>Jasmine Tan</span>
+            </div>
+            <div class="total-part">
+              <span>TOTAL</span>
+            </div>
+            <div class="total-value green">
+              <span>123.00</span>
+            </div>
+          </div>
+          <div class="discount-row-container">
+            <input matInput class="item-input">
+            <button mat-button class="discount-confirm">Submit</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- calculator-container -->
+      <div class="calculator-container">
+        <app-calculator></app-calculator>
+      </div>
+
+    </div>
+
+    <div class="category-container">
+      <div class="inner-container">
+
+        <!-- category-list-container -->
+        <div class="category-list-container">
+          <app-category-list [categoryList]="categoryList" (emitCategory)="chooseCategory($event)"></app-category-list>
+        </div>
+
+        <div class="product-cadiment-container">
+          <div class="product-inner-container">
+            <div class="product-container">
+              <app-product-list [productList]="productList" (emitProduct)="chooseProduct($event)"></app-product-list>
+            </div>
+            <div class="cadiment-container">
+              <app-cadiment-list [condiment]="condimentList"></app-cadiment-list>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-container">
+    <div class="footer-inner">
+      <ul>
+        <li><a class="active" href="#receipt">RECEIPT</a></li>
+        <li><a href="#e-receipt">E-RECEIPT</a></li>
+        <li><a href="#table">TABLE</a></li>
+        <li><a href="#reservation">RESERVATION</a></li>
+        <li><a href="#scan">SCAN</a></li>
+        <li><a href="#search">SEARCH</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

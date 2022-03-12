@@ -1,0 +1,30 @@
+<div class="item-list-container">
+      <!-- item-list-container -->
+      <div class="item-list-table">
+        <table>
+          <tr *ngFor="let item of calculateTable; let i = index">
+            <td class="item-number">
+              <input matInput class="item-input" [value]="item.number">
+            </td>
+            <td class="item-name">
+              {{item.name}}
+              <div class="extrea-item" *ngFor="let extra1 of item.extra">
+                <span>{{extra1?.number}} x</span>
+                <span> {{extra1?.name}}</span>
+              </div>
+            </td>
+            <td>
+              <input matInput class="item-input" [value]="item.quatity | number : '1.2-2' ">
+              <!-- {{item.quatity | number : '1.2-2' }} -->
+            </td>
+            <td class="quatity-number">
+              {{item.quatity * item.number | number : '1.2-2' }}
+              <div class="extrea-item" *ngFor="let extra1 of item.extra">
+                <span [ngClass]="extra1?.price == 0 || '' ? 'hide extra-price': 'extra-price'">{{extra1?.price |
+                  number : '1.2-2' }}</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+</div>
