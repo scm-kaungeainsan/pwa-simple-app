@@ -10,6 +10,7 @@ export class ItemListComponent implements OnInit {
   constructor() { }
   @Input() calculateTable: any;
   ngOnInit(): void {
+    console.log(this.calculateTable)
   }
 
 }

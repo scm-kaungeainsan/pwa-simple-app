@@ -1,5 +1,9 @@
 <div class="receipt-container">
+
+
   <div class="receipt-body-container">
+
+        <!-- left-cloumn -->
     <div class="calculation-container">
 
       <!-- menu-container -->
@@ -11,7 +15,7 @@
           <div class="menu-box invoice-number">
             <div class="invoice-number-inner">
               <span>INVOICE NUMBER</span>
-              <span class="green">201212020001</span>
+              <span class="green">201212020010</span>
             </div>
           </div>
           <div class="menu-box table-menu">
@@ -76,8 +80,8 @@
             </div>
           </div>
           <div class="discount-row-container">
-            <input matInput class="item-input">
-            <button mat-button class="discount-confirm">Submit</button>
+            <input [(ngModel)]="barCodeInput" matInput class="item-input">
+            <button mat-button class="discount-confirm">SUBMIT</button>
           </div>
         </div>
 
@@ -85,11 +89,12 @@
 
       <!-- calculator-container -->
       <div class="calculator-container">
-        <app-calculator></app-calculator>
+        <app-calculator (emitInput)="addingInput($event)"></app-calculator>
       </div>
 
     </div>
 
+    <!-- right-cloumn -->
     <div class="category-container">
       <div class="inner-container">
 
@@ -111,15 +116,17 @@
       </div>
     </div>
   </div>
+
+  <!-- footer-comtainer -->
   <div class="footer-container">
     <div class="footer-inner">
       <ul>
-        <li><a class="active" href="#receipt">RECEIPT</a></li>
-        <li><a href="#e-receipt">E-RECEIPT</a></li>
-        <li><a href="#table">TABLE</a></li>
-        <li><a href="#reservation">RESERVATION</a></li>
-        <li><a href="#scan">SCAN</a></li>
-        <li><a href="#search">SEARCH</a></li>
+        <li><a class="active" routerLink="/receipt-list">RECEIPT</a></li>
+        <li><a>E-RECEIPT</a></li>
+        <li><a routerLink="/table-layout">TABLE</a></li>
+        <li><a>RESERVATION</a></li>
+        <li><a>SCAN</a></li>
+        <li><a>SEARCH</a></li>
       </ul>
     </div>
   </div>

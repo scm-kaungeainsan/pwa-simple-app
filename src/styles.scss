@@ -17,3 +17,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background: rgb(2, 245, 2)!important;
   color: black!important;
 }
+::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+  background: #ffffff;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #c4c4c4;
+}
+
+::ng-deep.mat-menu-panel {
+  background: red!important;
+  box-shadow: none!important;
+}
+::ng-deep .mat-menu-content{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  background: red!important;
+  box-shadow: none!important;
+}

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {calculator} from '../../const/receipt-data'
 
 @Component({
   selector: 'app-calculator',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
+  @Output() emitInput: EventEmitter<any> = new EventEmitter();
+  calculatorRow = calculator;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addingInput(value: any) {
+  this.emitInput.emit(value);
   }
 
 }

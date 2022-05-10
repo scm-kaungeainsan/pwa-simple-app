@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { AngularMaterialModule } from './angular-material.module';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 import { ReceiptComponent } from './pages/receipt/receipt.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,6 +17,11 @@ import { CadimentListComponent } from './components/cadiment-list/cadiment-list.
 import { LoginComponent } from './pages/login/login.component';
 import { SampleComponent } from './pages/sample/sample.component';
 import { BoostrapComponent } from './pages/boostrap/boostrap.component';
+import { ReceiptListComponent } from './pages/receipt-list/receipt-list.component';
+import { ReceiptDetailComponent } from './pages/receipt-detail/receipt-detail.component';
+import { TableLayoutComponent } from './pages/table-layout/table-layout.component';
+import { TableLayoutDialogComponent } from './components/table-layout-dialog/table-layout-dialog.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,11 @@ import { BoostrapComponent } from './pages/boostrap/boostrap.component';
     CadimentListComponent,
     LoginComponent,
     SampleComponent,
-    BoostrapComponent
+    BoostrapComponent,
+    ReceiptListComponent,
+    ReceiptDetailComponent,
+    TableLayoutComponent,
+    TableLayoutDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +51,8 @@ import { BoostrapComponent } from './pages/boostrap/boostrap.component';
     AppRoutingModule,
     AngularMaterialModule,
     BrowserAnimationsModule,
+    DragDropModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,19 @@
+<!-- <div class="discount-row-container">
+  <input matInput class="item-input">
+  <button mat-button class="discount-confirm">Submit</button>
+</div> -->
 <div class="calculator-container">
   <div class="calculator-part-container">
     <div class="row1">
+      <div *ngFor="let item of calculatorRow" class="cal-box">
+        <button (click)="addingInput(item)" [style.color]="item.color" *ngIf="item.type === 'button'" [ngClass]="item.color === 'red' ? 'number-key clear-button' : 'number-key'" mat-button>{{item.name}}</button>
+        <button (click)="addingInput(item)" *ngIf="item.type === 'mat-icon'"  class="number-key" mat-button>
+          <mat-icon aria-hidden="false" aria-label="Example home icon">{{item.name}}</mat-icon>
+        </button>
+      </div>
+
+    </div>
+    <!-- <div class="row1">
       <div class="cal-box">
         <button class="red number-key" mat-button>C</button>
       </div>
@@ -14,8 +27,8 @@
           <mat-icon aria-hidden="false" aria-label="Example home icon">arrow_left</mat-icon>
         </button>
       </div>
-    </div>
-    <div class="row2">
+    </div> -->
+    <!-- <div class="row2">
       <div class="cal-box">
         <button class="number-key" mat-button>7</button>
       </div>
@@ -58,12 +71,12 @@
       <div class="cal-box">
         <button class="green number-key" mat-button>X</button>
       </div>
-    </div>
+    </div> -->
   </div>
   <div class="functional-part-container">
     <div class="row1">
       <div class="cal-box">
-        <button mat-button>SUB TOTAL</button>
+        <button routerLinkActive="mat-accent" mat-button>SUB TOTAL</button>
       </div>
       <div class="cal-box">
         <button mat-button>OTHER PAYMENT</button>

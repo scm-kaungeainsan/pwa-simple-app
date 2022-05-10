@@ -4,7 +4,7 @@
       <div class="category-box-cover"></div>
       <div (click)="chooseCategory(item.id)" *ngFor="let item of categoryList; let i = index"
         class="category-box">
-        <div class="item-img-cover">
+        <div *ngIf="item.img" ngclass="item-img-cover">
           <img class="category-img" [src]="item.img">
         </div>
         <span>{{item.name}}</span>

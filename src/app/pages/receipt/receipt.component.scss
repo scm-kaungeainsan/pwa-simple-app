@@ -1,7 +1,7 @@
 .receipt-container {
   background-color: #111;
-  // background-image: linear-gradient(to right, #8360c3, #2ebf91);
   color: #ffff;
+  width: 100%;
 
   .receipt-body-container {
     display: flex;
@@ -51,7 +51,6 @@
               button {
                 width: 50px;
                 background-color: unset;
-                // color: green;
                 border: 0;
                 font-size: 20px;
                 font-weight: bold;
@@ -75,7 +74,6 @@
             justify-content: space-between;
             background-color: #333;
             align-items: center;
-            // height: 20px;
             padding: 5px;
           }
 
@@ -117,6 +115,7 @@
             .item-input {
               height: 30px;
               width: 80%;
+              background-color: white;
             }
             .discount-confirm {
               background-color: #0c7e0c;
@@ -157,6 +156,9 @@
 
         }
       }
+    }
+    @media only screen and (max-width: 1040px) {
+      // flex-direction: column;
     }
   }
 

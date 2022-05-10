@@ -17,6 +17,7 @@ export class ReceiptComponent implements OnInit {
   categoryList = categoryList;
   productList: any;
   condimentList: any;
+  barCodeInput = '';
   myDate = new Date();
   constructor(private datePipe: DatePipe) { }
 
@@ -48,6 +49,29 @@ export class ReceiptComponent implements OnInit {
       //   this.condimentList = element?.condiment;
       // }
     });
+  }
+
+  addingInput(value: any) {
+    switch(value.function) {
+      case 'add':
+        if(value.name === '.' && 
+        (this.barCodeInput.length < 1 || (this.barCodeInput.length > 1 && this.barCodeInput.indexOf('.') !== -1))) {
+          return;
+        }
+        this.barCodeInput = this.barCodeInput + value.name;
+        break;
+      case 'delete':
+        this.barCodeInput = this.barCodeInput.substring(0, this.barCodeInput.length - 1);
+        break;
+      case 'clear':
+        this.barCodeInput = '';
+      break;
+      case 'multiply':
+        this.barCodeInput = this.barCodeInput + 'x';
+      break;
+      default:
+        // code block
+    }
   }
 
 }

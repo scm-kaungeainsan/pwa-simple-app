@@ -5,6 +5,9 @@ import {ReceiptComponent} from '../app/pages/receipt/receipt.component';
 import {LoginComponent} from '../app/pages/login/login.component';
 import {SampleComponent} from '../app/pages/sample/sample.component';
 import { BoostrapComponent } from './pages/boostrap/boostrap.component';
+import { ReceiptListComponent } from './pages/receipt-list/receipt-list.component';
+import { ReceiptDetailComponent } from './pages/receipt-detail/receipt-detail.component';
+import { TableLayoutComponent } from './pages/table-layout/table-layout.component';
 
 const routes: Routes = [
   {
@@ -22,6 +25,18 @@ const routes: Routes = [
   {
     path: 'boostrap',
     component: BoostrapComponent,
+  },
+  {
+    path: 'receipt-list',
+    component: ReceiptListComponent,
+  },
+  {
+    path: 'receipt-detail',
+    component: ReceiptDetailComponent,
+  },
+  {
+    path: 'table-layout',
+    component: TableLayoutComponent,
   }
 ];
 

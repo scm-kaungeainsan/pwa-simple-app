@@ -1,28 +1,51 @@
+.discount-row-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  align-items: center;
+  padding: 5px;
+  .item-input {
+    height: 30px;
+    width: 80%;
+  }
+  .discount-confirm {
+    background-color: #0c7e0c;
+  }
+}
+
 .calculator-container {
   width: 100%;
   display: flex;
   clear: both;
   .calculator-part-container {
     width: 60%;
+    .cal-box {
+      width: calc((100% - 30px) / 3);
+      float: left;
+    }
   }
   .functional-part-container {
     width: 40%;
-    height: 253px;
+    height: 274px;
     overflow: auto;
-    button {
-      background-color: #44abd5!important;
+    .row1, .row2, .row3, .row4, .row5 {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      .cal-box {
+        width: calc((100% - 15px) / 2);
+        button {
+          background-color: #44abd5;
+        }
+      }
     }
   }
   .row1, .row2, .row3, .row4, .row5 {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
     .cal-box {
-      margin-bottom: 5px;
+      margin: 5px;
       button {
         background-color: #333;
-        min-width: 87px;
-        max-width: 87px;
+        width: 100%;
         min-height: 46px;
         max-height: 30px;
         word-break: break-word;
@@ -31,20 +54,21 @@
         font-size: 16px;
         padding: 0;
         font-weight: normal;
+        .mat-icon {
+          font-size: 38px;
+          height: auto;
+          width: auto;
+        }
       }
       .number-key {
         font-size: 25px;
       }
-      .mat-icon {
-        font-size: 38px;
-        height: auto;
-        width: auto;
-      }
-      .dott {
-        height: 20px;
-        line-height: 0;
-        display: inline-block;
+      .clear-button:focus, .clear-button:active {
+        color: white!important;
       }
     }
+  }
+  .mat-button:focus, .mat-button:active {
+    background-color: red!important;
   }
 }
