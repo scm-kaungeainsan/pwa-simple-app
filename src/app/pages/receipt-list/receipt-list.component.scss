@@ -1,0 +1,32 @@
+.receipt-list-container {
+  .search-header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    mat-form-field {
+      width: 19%;
+    }
+  }
+
+  .receipt-list-table {
+    table {
+      width: 100%;
+
+      .selected {
+        background-color: lightblue;
+        cursor: pointer;
+      }
+    }
+
+    .button-cover {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+
+      button {
+        margin: 20px 0;
+      }
+    }
+  }
+}

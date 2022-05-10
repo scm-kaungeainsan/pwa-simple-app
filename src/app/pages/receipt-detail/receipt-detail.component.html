@@ -1,0 +1,133 @@
+<div class="receipt-detail-container">
+  <div class="receipt-detail-inner-container">
+    <div class="receipt-detail-list-container">
+      <div class="receipt-detail-inner">
+
+        <!-- order-number-part -->
+        <div class="order-number-part">
+          <hr>
+          <span>YOUR ORDER NUMBER</span>
+          <span class="number">{{orderNumber}}</span>
+          <hr>
+        </div>
+
+        <!-- address-part -->
+        <div class="address-part">
+          <span>201 Victoria Street</span>
+          <span>Bugis+ #04-07</span>
+          <span>Singapore 188067</span>
+          <span>GST Reg. No.: UEN 201113013Z</span>
+        </div>
+
+        <!-- printed-part -->
+        <div class="printed-part">
+          <span>PRINTED : 17-02-2022 01:28:39 PM</span>
+          <span>TERMINAL : BGSK02RMC</span>
+          <span>BILL NO : 20220217774</span>
+        </div>
+
+        <!-- menu-part -->
+        <div class="menu-part">
+          <hr>
+          <span class="dine-in">DINE-IN</span>
+          <hr>
+
+          <div class="category-container">
+            <div *ngFor="let item of calculateTable; let i=index">
+              <div class="category-inner">
+                <div class="number">{{item.number}}</div>
+                <div class="column">{{item.name}}</div>
+                <div class="total">${{item.quatity * item.number}}</div>
+              </div>
+              <div *ngIf="item.extra">
+                <div *ngFor="let extra of item.extra; let i=index" class="category-extra-inner">
+                  <div class="number">{{extra.number}}</div>
+                  <div class="number">{{extra.name}}</div>
+                </div>
+              </div>
+            </div>
+            <hr>
+
+            <div class="subtotal-container">
+              <div *ngFor="let item of receiptDetail">
+                <div class="subtotal-inner">
+                  <span>SUBTOTAL</span>
+                  <span>{{item.subtotal}}</span>
+                </div>
+                <div class="subtotal-inner">
+                  <span>7% GST (ADD ON)</span>
+                  <span>{{item.addOn}}</span>
+                </div>
+                <div class="subtotal-inner">
+                  <span>TOTAL</span>
+                  <span>{{item.total}}</span>
+                </div>
+                <div class="subtotal-inner">
+                  <span>VISA   :</span>
+                  <span>{{item.visa}}</span>
+                </div>
+                <div class="subtotal-inner">
+                  <span>Card Type   :</span>
+                  <span>{{item.cardType}}</span>
+                </div>
+                <div class="subtotal-inner">
+                  <span>Terminal ID   :</span>
+                  <span>{{item.terminalId}}</span>
+                </div>
+                <div class="subtotal-inner">
+                  <span>Merchant ID   :</span>
+                  <span>{{item.merchantId}}</span>
+                </div>
+                <div class="subtotal-inner">
+                  <span>Trans Date/Time   :</span>
+                  <span>{{item.transDateTime}}</span>
+                </div>
+                <div class="subtotal-inner">
+                  <span>CAN Number   :</span>
+                  <span>{{item.CanNumber}}</span>
+                </div>
+                <div class="subtotal-inner">
+                  <span>Expiry Date   :</span>
+                  <span>{{item.expiryDate}}</span>
+                </div>
+                <div class="subtotal-inner">
+                  <span>Approval Code   :</span>
+                  <span>{{item.approvalCode}}</span>
+                </div>
+                <div class="subtotal-inner">
+                  <span>Batch Number   :</span>
+                  <span>{{item.batchNumber}}</span>
+                </div>
+                <div class="subtotal-inner">
+                  <span>Reference Number   :</span>
+                  <span>{{item.referenceNumber}}</span>
+                </div>
+                <div class="subtotal-inner">
+                  <span>Txn ID   :</span>
+                  <span>{{item.txnID}}</span>
+                </div>
+                <div class="subtotal-inner">
+                  <span>Entry Type   :</span>
+                  <span>{{item.entryType}}</span>
+                </div>
+
+              </div>
+
+            </div>
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="receipt-detail-action-container">
+      <button mat-button class="reprint">REPRINT RECEIPT</button>
+      <button mat-button class="reprint">REPRINT KITCHEN COPY</button>
+      <button mat-button class="reprint">REPRINT LABEL COPY</button>
+      <button mat-button class="void">VOID</button>
+      <button routerLink="/receipt-list" mat-button class="cancel">CANCEL</button>
+    </div>
+  </div>
+</div>

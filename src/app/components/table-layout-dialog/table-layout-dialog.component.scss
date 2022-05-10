@@ -1,0 +1,22 @@
+.table-layout-dialog-container{
+
+  .row,
+  .action-btn-cover {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    mat-form-field {
+      width: 75%;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .action-btn-cover {
+    margin-bottom: 20px;
+  }
+}

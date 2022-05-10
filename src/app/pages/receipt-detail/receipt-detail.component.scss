@@ -1,0 +1,111 @@
+.receipt-detail-container {
+  font-size: 14px;
+  .receipt-detail-inner-container {
+    .receipt-detail-list-container {
+      border: 1px solid #e4dede;
+      display: inline-block;
+      width: 100%;
+
+      .receipt-detail-inner {
+        width: 50%;
+        margin: 0 auto;
+
+
+        .order-number-part {
+          width: 50%;
+          margin: 0 auto;
+          text-align: center;
+
+          hr {
+            border-top: 3px dashed #e4dede;
+            background-color: unset;
+            opacity: 1;
+          }
+
+          .number {
+            margin-left: 20px;
+          }
+        }
+
+        .address-part,
+        .printed-part {
+          text-align: center;
+          margin: 30px 0;
+
+          span {
+            display: block;
+            text-align: center;
+          }
+
+        }
+
+        .menu-part {
+
+          hr {
+            border-top: 3px dashed #e4dede;
+            background-color: unset;
+            opacity: 1;
+          }
+
+          .dine-in {
+            text-align: center;
+            display: block;
+          }
+
+          .category-container {
+            .category-inner {
+              display: flex;
+
+              .column {
+                width: calc((100% - 20px)/3);
+              }
+
+              .number {
+                margin-right: 10px;
+              }
+
+              .total {
+                width: calc((100% - 20px)/3);
+                margin-left: auto;
+                order: 2;
+                text-align: right;
+              }
+            }
+            .category-extra-inner {
+              display: flex;
+              margin-left: 50px;
+            }
+          }
+
+          .subtotal-container {
+            margin-bottom: 20px;
+            .subtotal-inner {
+              display: flex;
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+    }
+    .receipt-detail-action-container {
+      padding: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      ::ng-deep .mat-button {
+        min-width: 127px;
+        line-height: 46px;
+      }
+      .reprint, .void {
+        background-color: orange;
+      }
+      .cancel {
+        background-color: #538cf2;
+        float: right;
+      }
+      .reprint {
+        margin-right: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<div class="table-layout-dialog-container">
+  <div class="action-btn-cover">
+    <button (click)="onCancelClick()" mat-raised-button color="accent">
+      <mat-icon>cancel</mat-icon>
+      <span>Cancel</span>
+    </button>
+    <button (click)="saveBox()" mat-raised-button color="primary">
+      <mat-icon>save</mat-icon>
+      <span>Save</span>
+    </button>
+  </div>
+  <h1 mat-dialog-title>Table Info</h1>
+  <div mat-dialog-content>
+    <div class="table-menu-container">
+      <ul>
+        <li class="row">
+          <mat-label>Table Name</mat-label>
+          <mat-form-field appearance="fill">
+            <input [(ngModel)]="collect.name" matInput>
+          </mat-form-field>
+        </li>
+        <li class="row">
+          <mat-label>Color</mat-label>
+          <mat-form-field appearance="fill">
+            <mat-select [(ngModel)]="collect.color">
+              <mat-option value="#4ece4e">Green</mat-option>
+              <mat-option value="#e65454">Red</mat-option>
+              <mat-option value="#decb3c">Yellow</mat-option>
+              <mat-option value="#54d2e6">Blue</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </li>
+        <li class="row">
+          <mat-label>Type</mat-label>
+          <mat-form-field appearance="fill">
+            <mat-select [(ngModel)]="collect.type">
+              <mat-option value="circle">Circle</mat-option>
+              <mat-option value="square">Square</mat-option>
+              <mat-option value="long">Long</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </li>
+      </ul>
+  
+      <button *ngIf="data.status === 'edit'" (click)="delete()" mat-raised-button color="warn">
+        <mat-icon>delete</mat-icon>
+        <span>Delete</span>
+      </button>
+    </div>
+</div>

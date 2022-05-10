@@ -1,0 +1,73 @@
+<div #hello class="table-layout-container">
+  <div class="table-layout-inner">
+    <div class="control-pannel-container">
+      <div class="control-pannel-inner">
+        <div class="pannel-box"><button [matMenuTriggerFor]="menu" mat-raised-button color="primary">Setting</button>
+        </div>
+        <mat-menu #menu="matMenu" class="customize">
+          <div class="pannel-box"><button mat-raised-button color="primary" >Adjusting Day Layout</button></div>
+          <div class="pannel-box"><button mat-raised-button color="primary" (click)="addBox('')">Add Table</button></div>
+          <div class="pannel-box"><button mat-raised-button color="primary" (click)="filePicker.click()">Add Background Image</button>
+            <input hidden #filePicker id="file" type="file" class="form-control" (change)="onFileChange($event)">
+          </div>
+          <div class="pannel-box"><button (click)="resetAll()" mat-raised-button color="primary">Reset All</button>
+          </div>
+          <div class="pannel-box"><button mat-raised-button color="primary">Switch Layout</button></div>
+          <div class="pannel-box"><button mat-raised-button color="primary">Save as Design Layout</button></div>
+          <div class="pannel-box"><button mat-raised-button color="primary">Save</button></div>
+        </mat-menu>
+      </div>
+    </div>
+    <div class="layout-container">
+      <div class="square-boundary">
+        <ng-container *ngFor="let table of tableLayout" class="square-cover">
+          <div *ngIf="table?.show" [ngStyle]="{'background-color' : table.color}" [ngClass]="table.type"
+            (click)="openDialog(table)" (cdkDragStarted)="handleDragStart($event)" (cdkDragEnded)="cdkDragMoved($event)"
+            cdkDragBoundary=".layout-container" cdkDrag [cdkDragFreeDragPosition]="table.position">
+            {{table.name}}
+          </div>
+        </ng-container>
+      </div>
+      <mat-menu #menu="matMenu">
+        <div class="table-menu-container">
+          <mat-form-field>
+            <mat-label>Input</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Select</mat-label>
+            <mat-select>
+              <mat-option value="one">First option</mat-option>
+              <mat-option value="two">Second option</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Textarea</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+          <button mat-menu-item>
+            <mat-icon>delete</mat-icon>
+            <span>Delete</span>
+          </button>
+        </div>
+        <!-- <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button> -->
+      </mat-menu>
+    </div>
+    <div class="control-pannel-container">
+      <div class="control-pannel-inner">
+        <div routerLink="/receipt" class="pannel-box"><button class="exit" mat-raised-button color="primary">Exit</button></div>
+      </div>
+    </div>
+  </div>
+</div>
