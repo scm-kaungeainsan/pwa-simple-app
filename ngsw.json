@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1652295477853,
+  "timestamp": 1652299285966,
   "index": "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/favicon.ico",
         "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/index.html",
-        "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/main.356e6f78f160c09d.js",
+        "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/main.dc9ca02f4243a24b.js",
         "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/manifest.webmanifest",
         "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/polyfills.11f27645f54f82e9.js",
         "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/runtime.cd4bacd690656cf1.js",
-        "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/styles.91356fc3c57bf3ba.css"
+        "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/styles.6bb1460b8a76534c.css"
       ],
       "patterns": []
     },
@@ -91,12 +91,12 @@
     "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/g.ef4a2e97b6cd782c.jpg": "e7f0d0f053fb3c59a997fb80d8b633a9081c0d9e",
     "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/h.53fcfd3611e63b6b.jpg": "2a977ebca96449f3214e57885bc14fb805eb06b7",
-    "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/index.html": "b285ccabc9ed444cf8ed5da94de1bf342fb16ca0",
-    "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/main.356e6f78f160c09d.js": "8d92a32e7b0f3eb11ac444427c796f2f6fd677ae",
+    "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/index.html": "e94060527c91cff59ca11b10b6385a7cf60ef8f6",
+    "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/main.dc9ca02f4243a24b.js": "df47e5ac2fb361d500cedb0fde34d93539b7277c",
     "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/manifest.webmanifest": "e840ba0af6f18948c1c23a827105a129796cb655",
     "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/polyfills.11f27645f54f82e9.js": "07edf6391ca8b6e85bf146aac2b4ba2bbe30d96e",
     "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/runtime.cd4bacd690656cf1.js": "fe5fbc476894987434e48b45e9cd9c94701f7d3f",
-    "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/styles.91356fc3c57bf3ba.css": "2828b8fa4e5d7889c46b8b13c1c4fabf7cf7da79",
+    "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/styles.6bb1460b8a76534c.css": "b22dbe9ccecde3ba9f0955d63891825dee575f20",
     "https://github.com/scm-kaungeainsan.github.io/pwa-simple-app/texture-png.9bab577d4f990162.png": "0afd4d449c091c0a55090ea84cab8832631a067d"
   },
   "navigationUrls": [
